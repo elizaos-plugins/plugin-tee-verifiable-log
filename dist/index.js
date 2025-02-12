@@ -355,6 +355,7 @@ var VerifiableLogService = class extends Service {
   vlogOpen = false;
   // Add abstract initialize method that must be implemented by derived classes
   async initialize(runtime) {
+    var _a;
     if (runtime.databaseAdapter.db === null) {
       throw new Error("Database adapter is not initialized.");
     }
@@ -376,7 +377,7 @@ var VerifiableLogService = class extends Service {
       this.teeMode
     );
     const isOK = await this.verifiableLogProvider.registerAgent(
-      { agentId: runtime?.agentId, agentName: runtime?.character?.name },
+      { agentId: runtime == null ? void 0 : runtime.agentId, agentName: (_a = runtime == null ? void 0 : runtime.character) == null ? void 0 : _a.name },
       this.teeMode
     );
     if (!isOK) {
