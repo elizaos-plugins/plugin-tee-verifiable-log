@@ -1,11 +1,10 @@
 {
-    "name": "@elizaos/plugin-tee-verifiable-log",
+    "name": "@elizaos-plugins/plugin-tee-verifiable-log",
     "version": "0.1.9",
     "main": "dist/index.js",
     "type": "module",
     "types": "dist/index.d.ts",
     "dependencies": {
-        "@elizaos/core": "workspace:*",
         "@elizaos/plugin-tee": "workspace:*",
         "dompurify": "3.2.2",
         "elliptic": "^6.6.1",
