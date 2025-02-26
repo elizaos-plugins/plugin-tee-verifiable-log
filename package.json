@@ -30,5 +30,28 @@
     },
     "peerDependencies": {
         "whatwg-url": "7.1.0"
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "TEE_MODE": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Optional, for simulator purposes if testing on mac or windows. Leave empty for Linux x86 machines.",
+                "optional": true
+            },
+            "WALLET_SECRET_SALT": {
+                "type": "string",
+                "minLength": 1,
+                "description": "ONLY define if you want to use TEE Plugin, otherwise it will throw errors",
+                "optional": false
+            },
+            "VLOG": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Enables verbose logging.",
+                "optional": false
+            }
+        }
     }
 }
